@@ -65,12 +65,12 @@ install_gamingvpn() {
     # Define the directory and files
     DEST_DIR="/root/gamingvpn"
     FILE="/root/gamingvpn/gamingvpn"
-    URL_X86="https://github.com/Musixal/GamingVPN/raw/main/core/gamingvpn_amd64"
-    URL_ARM="https://github.com/Musixal/GamingVPN/raw/main/core/gamingvpn_arm"              
+    URL_X86="https://github.com/aliashtab77/torob/raw/main/core/gamingvpn_amd64"
+    URL_ARM="https://github.com/aliashtab77/torob/raw/main/core/gamingvpn_arm"              
       
     echo
     if [ -f "$FILE" ]; then
-	    colorize green "GamingVPN core installed already." bold
+	    colorize green "torob vpn core installed already." bold
 	    return 1
     fi
     
@@ -91,16 +91,16 @@ install_gamingvpn() {
     fi
 
 
-    colorize yellow "Installing GamingVPN Core..." bold
+    colorize yellow "Installing torob vpn Core..." bold
     echo
     curl -L $URL -o $FILE &> /dev/null
 	chmod +x $FILE 
     if [ -f "$FILE" ]; then
-        colorize green "GamingVPN core installed successfully...\n" bold
+        colorize green "torob vpn core installed successfully...\n" bold
         sleep 1
         return 0
     else
-        colorize red "Failed to install GamingVPN core...\n" bold
+        colorize red "Failed to install torob vpn core...\n" bold
         return 1
     fi
 }
